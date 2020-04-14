@@ -1,0 +1,268 @@
+.header {
+   background: url('../img/header/bg.jpg') no-repeat center;
+   background-size: cover;
+   background-attachment: fixed;
+   height: 100vh;
+   width: 100%;
+}
+
+.header-top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 40px;
+}
+
+.burger {
+   background: url('../img/header/burger.svg') no-repeat;
+   width: 25px;
+   height: 25px;
+   display: none;
+   transition: all 0.3s;
+}
+
+.cross {
+   background: url('../img/header/cross.svg') no-repeat;
+   width: 25px;
+   height: 25px;
+   display: block;
+}
+
+.mobile-menu {
+   display: none;
+}
+
+.menu {
+
+   &__item {
+      font-weight: 400;
+      font-size: 14px;
+      color: #f4f5f9;
+
+
+
+      &:not(:last-child) {
+         margin-right: 50px;
+      }
+
+      &:hover {
+
+         color: #e74c3c;
+         border-bottom: 1px solid #e74c3c;
+         padding-bottom: 20px;
+      }
+
+
+   }
+}
+
+.header-main {
+   margin-top: 100px;
+
+}
+
+
+.header-text {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.header {
+
+   &__subtitle {
+      font-size: 19px;
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: #f4f5f9;
+   }
+
+   &__title {
+      font-size: 60px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #f4f5f9;
+      letter-spacing: 0.4vw;
+      margin-top: 30px;
+      position: relative;
+
+
+   }
+
+   &__description {
+      font-size: 14px;
+      line-height: 2.9vh;
+      font-weight: 400;
+      color: #cbc6c0;
+      max-width: 590px;
+      text-align: center;
+   }
+
+   &__actions {
+      display: flex;
+      margin-top: 50px;
+
+   }
+}
+
+.round {
+   width: 7px;
+   height: 7px;
+   background-color: #e74c3c;
+   border-radius: 50%;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   position: relative;
+   margin-left: 20px;
+
+   &::after {
+      content: '';
+      background-color: #cbc6c0;
+      width: 80px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 25px;
+   }
+
+   &::before {
+      content: '';
+      background-color: #cbc6c0;
+      width: 80px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 25px;
+   }
+}
+
+
+.action-btn {
+   background-color: transparent;
+   border: none;
+   font-size: 14px;
+   line-height: 1.2;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.01em;
+   color: #ffffff;
+   border: 1.0px solid #ffffff;
+   transition: all 0.2s;
+   width: 200px;
+   height: 50px;
+
+   &:hover {
+      background-color: #e74c3c;
+   }
+}
+
+.header-btn__start {
+   margin-right: 40px;
+}
+
+
+.down {
+
+   background-color: #f4f5f9;
+   border-radius: 50%;
+   padding: 10px 13px;
+   cursor: pointer;
+   margin-top: 50px;
+}
+
+// MEdia
+
+@media (max-width:900px) {
+   .menu {
+
+      &__item {
+         font-size: 12px;
+
+         &:not(:last-child) {
+            margin-right: 30px;
+         }
+      }
+
+
+   }
+
+   .down {
+      display: none;
+   }
+
+   .header {
+      &__subtitle {
+         font-size: 14px;
+      }
+
+      &__title {
+         font-size: 40px;
+         margin-top: 15px;
+      }
+   }
+
+   .round {
+      margin: 30px;
+   }
+}
+
+@media (max-width:700px) {
+   .menu {
+      display: none;
+
+   }
+
+
+
+   .burger {
+      display: block;
+      cursor: pointer;
+      margin-right: 20px;
+      position: absolute;
+      z-index: 12;
+      right: 20px;
+      top: 60px;
+   }
+
+   .mobile-menu {
+      position: absolute;
+      display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.9);
+      transition: add 0.3s;
+      overflow: hidden;
+
+      & a {
+         margin-top: 25px;
+         font-size: 25px;
+         text-align: center;
+         color: #fff
+      }
+
+   }
+
+   .mobile__active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+@media(max-width:450px) {
+   .action-btn {
+      width: 130px;
+      font-size: 12px;
+      height: 45px;
+   }
+
+   .header__title {
+      text-align: center;
+   }
+}

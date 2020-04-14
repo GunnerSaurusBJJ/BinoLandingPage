@@ -1,0 +1,129 @@
+.works {
+   margin-top: 100px;
+}
+
+.main-title {
+   font-size: 36px;
+   line-height: 1.2;
+   font-weight: 700;
+   letter-spacing: 0.1em;
+   color: #6a6a6a;
+   text-align: center;
+
+}
+
+.main-subtitle {
+   text-align: center;
+   font-size: 17px;
+   line-height: 29px;
+   font-weight: 400;
+   color: #999999;
+   margin-top: 10px;
+}
+
+.works-round {
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+.works-filter {
+
+   &__categ {
+      text-align: center;
+      margin-top: 20px;
+   }
+}
+
+.categ {
+
+   &__item {
+      font-weight: 400;
+      color: #999999;
+      font-size: 19px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-child) {
+         margin-right: 30px;
+
+         &::after {
+            content: '/';
+            position: absolute;
+            transform: translateX(13px);
+         }
+      }
+   }
+
+   &__active {
+      font-weight: 700;
+      color: #e74c3c;
+   }
+}
+
+.works-images {
+   display: flex;
+   margin-top: 40px;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.works-card {
+   position: relative;
+   transition: all 0.3s;
+
+   &:hover .card-hover {
+      opacity: 1;
+   }
+
+   & img {
+      max-width: 480px;
+      width: 100%;
+   }
+}
+
+.card-hover {
+   transition: all 0.3s;
+   cursor: pointer;
+   opacity: 0;
+   position: absolute;
+   background: rgba(231, 76, 60, 0.8);
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   padding-left: 50px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding-bottom: 40px;
+
+   & h3 {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+         content: '';
+         width: 44px;
+         height: 4px;
+         background-color: #ffffff;
+         position: absolute;
+         transform: translateY(-20px);
+      }
+   }
+
+   & p {
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+   }
+}
