@@ -1,0 +1,93 @@
+.study {
+   padding-top: 100px;
+   padding-bottom: 100px;
+   background-color: #f4f5f9;
+
+}
+
+.study-wrapper {
+   margin-top: 100px;
+   position: relative;
+}
+
+.study-bg {
+   text-align: right;
+
+   & img {
+      max-width: 580px;
+      width: 100%;
+   }
+}
+
+.study-subtitle {
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+
+.study-box {
+   background-color: #fff;
+   max-width: 640px;
+   width: 100%;
+   height: auto;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   &__image {
+      margin-top: 80px;
+   }
+
+   &__title {
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.075em;
+      color: #6a6a6a;
+      margin: 40px;
+      text-align: center;
+   }
+
+   &__description {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 300;
+      letter-spacing: 0.075em;
+      color: #999999;
+      text-align: center;
+      max-width: 550px;
+   }
+
+
+}
+
+.study-btn {
+   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.25);
+   background-color: #e74c3c;
+   font-size: 12px;
+   line-height: 1.2;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 0.01em;
+   color: #ffffff;
+   border: none;
+   outline: none;
+   padding: 14px 23px;
+   margin-top: 40px;
+   margin-bottom: 70px;
+   transition: all .3s;
+
+   &:hover {
+      color: #e74c3c;
+      background-color: #000;
+   }
+}
+
+@media(max-width:500px) {
+   .study-box {
+      position: static;
+   }
+}
